@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    @apply font-nunito
+  }
+
+  .layout {
+    @apply mx-auto max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl px-4 sm:px-0
+  }
+
+  .layout-swiper-navigation {
+    @apply mx-auto max-w-[425px] md:max-w-[750px] lg:max-w-[980px] xl:max-w-[1380px]
+  }
+
+  .layout-article {
+    @apply mx-auto w-full sm:max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-4xl px-4 lg:px-8
+  }
+
+  /* Layout blog */
+  #article-content {
+    @apply space-y-6
+  }
+
+  #article-content h2 {
+    @apply text-pretty text-xl md:text-2xl font-bold
+  }
+
+  #article-content h3 {
+    @apply text-pretty text-lg md:text-xl font-bold
+  }
+
+  #article-content p {
+    @apply text-sm md:text-base text-pretty text-justify
+  }
+
+  #article-content a {
+    @apply text-[#4197CE] hover:underline
+  }
+
+  #article-content figcaption {
+    @apply text-center font-extralight
+  }
+
+  #article-content img {
+    @apply mx-auto w-[90%] h-auto
+  }
+
+  #article-content blockquote {
+    @apply bg-sky-200 p-4 md:p-8 bg-opacity-30 border-l-8 border-sky-400
+  }
+}
+
+@layer utilities {
+  .hamburger-toggle {
+    &>div {
+      @apply h-0;
+
+      &:before {
+        @apply translate-y-0 rotate-45;
+      }
+
+      &:after {
+        @apply translate-y-0 -rotate-45;
+      }
+    }
+  }
+}
